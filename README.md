@@ -79,7 +79,7 @@ The following scripts analyze different replicates of somitoid/segmentoid and ar
 This step takes input from "sortingFlows\cell_struct". The user will be able to run these scripts (for somitoids and segmentoids respectively)
 
 Sample output can be downloaded from: 
-https://drive.google.com/file/d/1wAUL9sT1bplaU9MkZxJR7p-szKSrFHop/view?usp=share_link
+https://drive.google.com/file/d/1ln46w0b1OtHM0Ck1z-pWpkyZt2WHaYER/view?usp=share_link
 
 4. For PIV, revision2_segmentoid_piv.m and revision2_somitoid_piv.m are used for generating preliminary PIV outputs and plots. They take input from ilastik results and original movies, which are large files that are not included. 
 5. revision2_segmentoid_piv_find_offset.m find offsets for removing MESP2- cells, as described in Methods. Output of this step is already stored in the "cell_struct" folder.
