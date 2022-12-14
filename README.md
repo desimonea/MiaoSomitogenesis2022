@@ -28,14 +28,14 @@ Memory 32 GB
 INSTALLATION AND USAGE - Kimographs, nematic order and spatial correlation
 
 The user can run the code by changing 
-MATLAB's present working directory to 'MiaoSomitogenesis2022-master'.
+MATLAB's present working directory to 'MiaoSomitogenesis2022-main'.
 MS Windows users have to adapt paths to MS Windows sintax.
  
 Data files are too large to include within this Github repo and must be
 downloaded separately from:
 
 The downloaded folder must be unzipped and tne 'data' folder must be
-placed in 'DeSimoneErkwaves2020-master'.
+placed in 'MiaoSomitogenesis2022-main'.
 
 MATLAB Toolboxes required are:
 - Image Processing Toolbox 
@@ -54,9 +54,5 @@ The main image processing routine are:
 3) mainSomitoid_Mesp2Uncx.m - It calculates the spatial correlation of Mesp2, Uncx and Mesp2-Uncx signals in somitoids.
 
 The script can run altogether or each section sequentially.
-
-Scale data are saved in objects files in the "objects" folder (myScale
-data struct). Stacks are saved as tiff files.
-
 
 A sample dataset is provided is provided (see Installation). Expected output for each step is provided. 8Gb RAM is required. Data sample runtime: minutes.
