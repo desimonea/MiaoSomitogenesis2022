@@ -5,7 +5,6 @@ clc;
 addpath(genpath('./functions/'))
 %% define paths 
 paths = [];
-paths.directory = 'D:\BIO\PhD\ditalia\somitoid\data\image\Segmentoid_H2B spiking\';
 paths.expname1 = 'ROI_H2B spiking_Mesp2_Segmentoid_Day4 start_6min interval_2022_04_03__16_42_48_Subset';
 paths.expname2 = 'ROID_2022_05_12__23_33_17_Subset-D';
 paths.expname3 = 'ROIA_2022_05_12__23_33_17_Subset-A';
@@ -13,8 +12,9 @@ paths.expname3 = 'ROIA_2022_05_12__23_33_17_Subset-A';
 paths.dataname1 = [paths.expname1,'-data'];
 paths.dataname2 = [paths.expname2,'-data'];
 paths.dataname3 = [paths.expname3,'-data'];
-paths.plotFolder = 'D:\BIO\PhD\ditalia\somitoid\github\ditalia-somitoid\code_revision2_alvin\figure_revision2_segmentoid';
+paths.plotFolder = '../sortingFlows_figures\figure_revision2_segmentoid';
 mkdir(paths.plotFolder);
+mkdir('../excel_data')
 % define pixelsize
 xy_pxsize = 0.692;
 z_pxsize = 8;

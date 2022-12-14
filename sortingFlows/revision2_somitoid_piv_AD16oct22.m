@@ -24,9 +24,10 @@ else
     labelOffset = '';
 end
 
-paths.plotFolder = '..\figure_revision2_somitoid_piv\';
+paths.plotFolder = '../sortingFlows_figures/figure_revision2_somitoid_piv/';
 mkdir(paths.plotFolder);
 mkdir([paths.plotFolder '/tests']);
+mkdir('../excel_data')
 
 % define pixelsize
 dx = 0.692; % um

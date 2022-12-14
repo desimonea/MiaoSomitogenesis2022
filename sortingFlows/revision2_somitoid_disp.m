@@ -5,13 +5,14 @@ clc;
 addpath(genpath('./functions/'))
 %% define paths 
 paths = [];
-paths.directory = 'D:\BIO\PhD\ditalia\somitoid\data\image\Somitoid_single cell tracking\';
 paths.expname1 = 'Somitoid1_ 72-84hr_6min interval_2021_09_10__10_15_25';
 paths.expname2 = 'Somitoid2_ 72-84hr_6min interval_2021_09_18__15_24_26';
 paths.dataname1 = [paths.expname1,'-data'];
 paths.dataname2 = [paths.expname2,'-data'];
-paths.plotFolder = 'D:\BIO\PhD\ditalia\somitoid\github\ditalia-somitoid\code_revision2_alvin\figure_revision2_somitoid';
+paths.plotFolder = '../sortingFlows_figures\figure_revision2_somitoid';
 mkdir(paths.plotFolder)
+mkdir('../excel_data')
+
 % define pixelsize
 xy_pxsize = 0.692;
 z_pxsize = 2.24;

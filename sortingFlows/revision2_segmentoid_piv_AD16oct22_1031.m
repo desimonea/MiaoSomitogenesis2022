@@ -32,9 +32,10 @@ else
     labelOffset = '';
 end
 
-paths.plotFolder = ['D:\BIO\PhD\ditalia\somitoid\github\ditalia-somitoid\code_revision2_alvin\figure_revision2_segmentoid_piv' labelOffset    '/'];
+paths.plotFolder = ['../sortingFlows_figures\figure_revision2_segmentoid_piv' labelOffset    '/'];
 mkdir(paths.plotFolder);
 mkdir([paths.plotFolder '/tests']);
+mkdir('../excel_data')
 
 % define pixelsize
 dx = 0.692; % um
