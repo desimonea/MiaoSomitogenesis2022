@@ -18,7 +18,6 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-
 The code requires MATLAB (MathWorks).
 The code runs in MATLAB_R2022a. The code runs on a 
 MacBook Pro (14-inch, 2021) macOS Monterey
@@ -33,6 +32,7 @@ MS Windows users have to adapt paths to MS Windows sintax.
  
 Data files are too large to include within this Github repo and must be
 downloaded separately from:
+https://drive.google.com/file/d/15o-6nOMArxW6rLGYv5WqQHi1q7tN9ZGz/view?usp=share_link
 
 The downloaded folder must be unzipped and tne 'data' folder must be
 placed in 'MiaoSomitogenesis2022-main'.
@@ -56,3 +56,33 @@ The main image processing routine are:
 The script can run altogether or each section sequentially.
 
 A sample dataset is provided is provided (see Installation). Expected output for each step is provided. 8Gb RAM is required. Data sample runtime: minutes.
+
+INSTALLATION AND USAGE - SORTING FLOWS
+
+You current Folder needs to be "MiaoSomitogenesis2022-main/sortingFlows/" while running this pipeline.
+
+Data files are too large to include within this Github repo and must be
+downloaded separately from:
+https://drive.google.com/file/d/190IquISjvHIV3okzDnBo805sy3sXpJPW/view?usp=share_link
+The downloaded folder must be unzipped and the "data_tif" and "cell_struct" folders must be
+placed in 'MiaoSomitogenesis2022-main/sortingFlows/'.
+
+1. run experiment_*.m
+2. run analysis_*.m except analysis_*_merge.m
+
+These two steps take input from ilastik results and original movies, which are large files and not included. 
+The outputs of these two steps are in the "cell_struct" folder from Google Drive.
+
+The following scripts analyze different replicates of somitoid/segmentoid and are similar to each other.
+
+3. run revision2_*_tracking.m and revision2_somitoid_disp.m to produce output figures into "figure_revision2_segmentoid" or "somitoid"
+This step takes input from "sortingFlows\cell_struct". The user be able to run these scripts (for somitoids and segmentoids respectively)
+
+Sample output can be downloaded from: 
+https://drive.google.com/file/d/1wAUL9sT1bplaU9MkZxJR7p-szKSrFHop/view?usp=share_link
+
+4. For PIV, revision2_segmentoid_piv.m and revision2_somitoid_piv.m are used for generating preliminary PIV outputs and plots. They take input from ilastik results and original movies, which are large files that are not included. 
+5. revision2_segmentoid_piv_find_offset.m find offsets for removing MESP2- cells, as described in Methods.
+6. revision2_somitoid_piv_drawROI.m is used to manually raw ROIs for statistical tests. The generated ROIs are already stored in "cell_struct".
+7. revision2_segmentoid_piv_AD16oct22_1031.m generate final figures for PIV into "figure_revision2_segmentoid_piv", taking inputs from "cell_struct" and "data_tif".
+8. revision2_somitoid_piv_AD16oct22.m generate final figures for PIV into "figure_revision2_somitoid_piv", taking inputs from "cell_struct" and "data_tif".
