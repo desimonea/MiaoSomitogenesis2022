@@ -75,14 +75,16 @@ The outputs of these two steps are in the "cell_struct" folder from Google Drive
 
 The following scripts analyze different replicates of somitoid/segmentoid and are similar to each other.
 
-3. run revision2_*_tracking.m and revision2_somitoid_disp.m to produce output figures into "figure_revision2_segmentoid" or "somitoid"
-This step takes input from "sortingFlows\cell_struct". The user be able to run these scripts (for somitoids and segmentoids respectively)
+3. run revision2_*_tracking.m and revision2_somitoid_disp.m to produce output figures into "MiaoSomitogenesis2022-main/sortingFlows_figures/figure_revision2_segmentoid" or "MiaoSomitogenesis2022-main/sortingFlows_figures/figure_revision2_somitoid"
+This step takes input from "sortingFlows\cell_struct". The user will be able to run these scripts (for somitoids and segmentoids respectively)
 
 Sample output can be downloaded from: 
 https://drive.google.com/file/d/1wAUL9sT1bplaU9MkZxJR7p-szKSrFHop/view?usp=share_link
 
 4. For PIV, revision2_segmentoid_piv.m and revision2_somitoid_piv.m are used for generating preliminary PIV outputs and plots. They take input from ilastik results and original movies, which are large files that are not included. 
-5. revision2_segmentoid_piv_find_offset.m find offsets for removing MESP2- cells, as described in Methods.
-6. revision2_somitoid_piv_drawROI.m is used to manually raw ROIs for statistical tests. The generated ROIs are already stored in "cell_struct".
-7. revision2_segmentoid_piv_AD16oct22_1031.m generate final figures for PIV into "figure_revision2_segmentoid_piv", taking inputs from "cell_struct" and "data_tif".
-8. revision2_somitoid_piv_AD16oct22.m generate final figures for PIV into "figure_revision2_somitoid_piv", taking inputs from "cell_struct" and "data_tif".
+5. revision2_segmentoid_piv_find_offset.m find offsets for removing MESP2- cells, as described in Methods. Output of this step is already stored in the "cell_struct" folder.
+6. revision2_somitoid_piv_drawROI.m is used to manually draw ROIs for statistical tests. The generated ROIs are already stored in "cell_struct". 
+7. revision2_segmentoid_piv_AD16oct22_1031.m generate final figures for PIV into "MiaoSomitogenesis2022-main/sortingFlows_figures/figure_revision2_segmentoid_piv", taking inputs from "cell_struct" and "data_tif".
+8. revision2_somitoid_piv_AD16oct22.m generate final figures for PIV into "MiaoSomitogenesis2022-main/sortingFlows_figures/figure_revision2_somitoid_piv", taking inputs from "cell_struct" and "data_tif".
+
+Finally, source data of all figures from "sortingFlows" are generated and stored in "MiaoSomitogenesis2022-main/excel_data/"
